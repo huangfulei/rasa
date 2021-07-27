@@ -1,13 +1,20 @@
-FROM rasa/rasa-sdk:latest
+# FROM rasa/rasa-sdk:latest
 
-WORKDIR /app
+# WORKDIR /app
 
-# COPY actions/requirements.txt ./
+# # COPY actions/requirements.txt ./
 
-USER root 
+# USER root 
 
-COPY ./actions /app/actions
+# COPY ./actions /app/actions
 
-# RUN pip install -r requirement.txt
+# # RUN pip install -r requirement.txt
 
-USER 1000
+# USER 1000
+
+FROM ubuntu:21.04
+ENTRYPOINT []
+RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa
+ADD . /app/
+RUN chmod +x /app/start_services.sh
+CMD /app/start_services.sh
