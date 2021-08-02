@@ -43,6 +43,7 @@ nlu:
       - that sounds good
       - correct
       - sure
+      - correct
 
   - intent: deny
     examples: |
