@@ -1,20 +1,27 @@
-# FROM rasa/rasa-sdk:latest
+# Extend the official Rasa SDK image
+FROM rasa/rasa-sdk:2.8.0
 
-# WORKDIR /app
+# Use subdirectory as working directory
+WORKDIR /app
 
-# # COPY actions/requirements.txt ./
+# Copy any additional custom requirements, if necessary (uncomment next line)
+# COPY actions/requirements-actions.txt ./
 
-# USER root 
+# Change back to root user to install dependencies
+USER root
 
-# COPY ./actions /app/actions
+# Install extra requirements for actions code, if necessary (uncomment next line)
+# RUN pip install -r requirements-actions.txt
 
-# # RUN pip install -r requirement.txt
+# Copy actions folder to working directory
+COPY ./actions /app/actions
 
-# USER 1000
+# By best practices, don't run the code with root user
+USER 1001
 
-FROM ubuntu:18.04
-ENTRYPOINT []
-RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa
-ADD . /app/
-RUN chmod +x /app/start_services.sh
-CMD /app/start_services.sh
+# FROM ubuntu:18.04
+# ENTRYPOINT []
+# RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa
+# ADD . /app/
+# RUN chmod +x /app/start_services.sh
+# CMD /app/start_services.sh
