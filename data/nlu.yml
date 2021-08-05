@@ -102,3 +102,9 @@ nlu:
       - How long is the shipping?
       - How much is the delivery?
       - Are you based in Ireland?
+
+  - intent: out_of_scope
+    examples: |
+      - I want to order food
+      - what is 2+2?
+      - who's the US president?
