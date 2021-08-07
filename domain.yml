@@ -19,7 +19,7 @@ intents:
       use_entities: true
   - bot_challenge:
       use_entities: true
-  - information:
+  - ask_product_price:
       use_entities: true
 entities: []
 slots: {}
@@ -37,8 +37,8 @@ responses:
     - text: Bye
   utter_iamabot:
     - text: I am a bot, powered by Rasa.
-  utter_info:
-    - text: It normally takes 2-5 days. Please be patient, Thanks for your understanding.
+  utter_product_price:
+    - text: It's 10 Euro
   utter_out_of_scope:
     - text: Sorry, I'm still learning.
   utter_please_rephrase:
@@ -53,7 +53,6 @@ actions:
   - utter_goodbye
   - utter_iamabot
   - utter_info
-  - action_hello_world
   - action_default_fallback
   - call_dialoGPT_model
   - call_blenderbot_3B_model

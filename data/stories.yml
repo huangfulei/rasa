@@ -28,7 +28,7 @@ stories:
       - intent: deny
       - action: utter_goodbye
 
-  - story: information happy path
+  - story: ask product price happy path
     steps:
-      - intent: information
-      - action: action_hello_world
+      - intent: ask_product_price
+      - action: utter_product_price
