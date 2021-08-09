@@ -1,0 +1,15 @@
+stories:
+  - story: ask product price happy path
+    steps:
+      - intent: ask_product_price
+      - action: utter_product_price
+
+  - story: ask shipping price happy path
+    steps:
+      - intent: ask_shipping_price
+      - action: utter_product_price
+
+  - story: place order happy path
+    steps:
+      - intent: place_the_order
+      - action: utter_product_price

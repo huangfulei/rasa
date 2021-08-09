@@ -3,3 +3,4 @@
 .bash_history
 models/
 **_pycache_**
+**.db

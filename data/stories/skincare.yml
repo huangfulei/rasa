@@ -1,0 +1,5 @@
+stories:
+  - story: ask skincare routine happy path
+    steps:
+      - intent: ask_skincare_routine
+      - action: utter_product_price

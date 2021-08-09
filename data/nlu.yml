@@ -1,4 +1,5 @@
 version: "2.0"
 includes:
-  - intents.standard.yml
-  # - custom.yml
+  - intents.generic.yml
+  - intents.shopping.yml
+  - intents.skincare.yml

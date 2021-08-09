@@ -1,0 +1,6 @@
+nlu:
+  - intent: ask_skincare_routine
+    examples: |
+      - How to keep my skin young?
+      - How to remove wrinkles?
+      - How to remove dark circle?

@@ -1,0 +1,20 @@
+nlu:
+  - intent: ask_product_price
+    examples: |
+      - How much is it?
+      - How much?
+      - What is the price?
+      - price?
+
+  - intent: ask_shipping_price
+    examples: |
+      - is the shipping free?
+      - how much is the shipping?
+      - how much I need to pay for the shipping?
+      - what's the price for the delivery?
+
+  - intent: place_the_order
+    examples: |
+      - how can I place the order?
+      - how do I buy?
+      - where can i buy it?

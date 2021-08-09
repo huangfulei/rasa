@@ -92,13 +92,6 @@ nlu:
       - am I talking to a bot?
       - am I talking to a human?
 
-  - intent: ask_product_price
-    examples: |
-      - How much is it?
-      - How much?
-      - What is the price?
-      - price?
-
   - intent: out_of_scope
     examples: |
       - I want to order food

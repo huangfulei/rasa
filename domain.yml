@@ -1,60 +1,72 @@
-version: "2.0"
+version: '2.0'
 config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-  - greet:
-      use_entities: true
-  - goodbye:
-      use_entities: true
-  - affirm:
-      use_entities: true
-  - deny:
-      use_entities: true
-  - mood_great:
-      use_entities: true
-  - mood_unhappy:
-      use_entities: true
-  - bot_challenge:
-      use_entities: true
-  - ask_product_price:
-      use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- feedback:
+    use_entities: true
+- ask_product_price:
+    use_entities: true
+- ask_shipping_price:
+    use_entities: true
+- place_the_order:
+    use_entities: true
+- ask_skincare_routine:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities: []
 slots: {}
 responses:
   utter_greet:
-    - text: Hey! How are you?
+  - text: Hey! How are you?
   utter_cheer_up:
-    - image: https://i.imgur.com/nGF1K8f.jpg
-      text: "Here is something to cheer you up:"
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_did_that_help:
-    - text: Did that help you?
+  - text: Did that help you?
   utter_happy:
-    - text: Great, carry on!
+  - text: Great, carry on!
   utter_goodbye:
-    - text: Bye
+  - text: Bye
   utter_iamabot:
-    - text: I am a bot, powered by Rasa.
+  - text: I am a bot, powered by Rasa.
   utter_product_price:
-    - text: It's 10 Euro
+  - text: It's 10 Euro
   utter_out_of_scope:
-    - text: Sorry, I'm still learning.
+  - text: Sorry, I'm still learning.
   utter_please_rephrase:
-    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_default:
-    - text: Sorry I didn't get that. Can you rephrase?
+  - text: Sorry I didn't get that. Can you rephrase?
 actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_info
-  - action_default_fallback
-  - call_dialoGPT_model
-  - call_blenderbot_3B_model
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_info
+- action_default_fallback
+- call_dialoGPT_model
+- call_blenderbot_3B_model
 forms: {}
 e2e_actions: []
