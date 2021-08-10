@@ -1,6 +1,0 @@
-# pip install transformers[torch]
-# pip install nltk
-transformers
-torch
-rasa_sdk
-nltk
